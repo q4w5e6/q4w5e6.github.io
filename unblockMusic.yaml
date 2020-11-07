@@ -85,5 +85,4 @@ rules:
 - IP-CIDR,223.252.199.67/32,UnblockNeteaseMusic
 
 # GeoIP China
-- PROCESS-NAME, NeteaseMusic, UnblockNeteaseMusic
 - MATCH,DIRECT
