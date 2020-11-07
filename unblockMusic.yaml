@@ -36,7 +36,7 @@ proxies:
   - {"name":"✈网易云解锁-2-🔮","type":"http","server":106.52.127.72,"port":19951,over-tls:"false",fast-open:"false",udp-relay:"false"}
   - {"name":"✈网易云解锁-3-🔮","type":"http","server":music.griouges.cn,"port":39000,over-tls:"false",fast-open:"false",udp-relay:"false"}
   - {"name":"✈网易云解锁-4-🔮","type":"http","server":111.67.197.245,"port":10086,over-tls:"false",fast-open:"false",udp-relay:"false"}
-  - {"name":"✈网易云解锁-5-🔮","type":"ss","server":music.desperadoj.com,"port":30003,"method":"aes-128-gcm","password":"desperadoj.com",fast-open:"false",udp-relay:"false"}
+  - {"name":"✈网易云解锁-5-🔮","type":"ss","server":music.desperadoj.com,"port":30003,"cipher":"aes-128-gcm","password":"desperadoj.com",fast-open:"false",udp-relay:"false"}
   
 proxy-groups:
 -
