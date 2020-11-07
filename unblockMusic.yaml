@@ -38,19 +38,24 @@ proxies:
   
 proxy-groups:
 -
-  name: Proxy
+  name: 🔰节点选择
   type: select
   proxies:
-    - DIRECT
-    -'网易云解锁1'
-    -'网易云解锁2'
-    -'网易云解锁3'
+    - 🚀直接连接
+    - '🔮网易云解锁1'
+    - '🎬网易云解锁2'
+    - '♻网易云解锁3'
 -
   name: UnblockNeteaseMusic
   type: select
   proxies:
-    -Proxy
-    -DIRECT
+    - 🔰节点选择
+    - 🚀直接连接
+-
+  name: 🚀直接连接
+  type: select
+  proxies:
+    - DIRECT
     
 rules:
 # > unblockNeteaseMusic
