@@ -54,14 +54,11 @@ proxy-groups:
     
 rules:
 # > unblockNeteaseMusic
-- DOMAIN-SUFFIX,163.com,UnblockNeteaseMusic
 - DOMAIN-SUFFIX,music.163.com,UnblockNeteaseMusic
 - DOMAIN-SUFFIX,interface.music.163.com,UnblockNeteaseMusic
 - DOMAIN-SUFFIX,interface3.music.163.com,UnblockNeteaseMusic
 - DOMAIN-SUFFIX,apm.music.163.com,UnblockNeteaseMusic
 - DOMAIN-SUFFIX,apm3.music.163.com,UnblockNeteaseMusic
-- DOMAIN-SUFFIX,man.netease.com,UnblockNeteaseMusic
-- DOMAIN-SUFFIX,api.iplay.163.com,UnblockNeteaseMusic
 - IP-CIDR,39.105.63.80/32,UnblockNeteaseMusic
 - IP-CIDR,45.254.48.1/32,UnblockNeteaseMusic
 - IP-CIDR,47.100.127.239/32,UnblockNeteaseMusic
