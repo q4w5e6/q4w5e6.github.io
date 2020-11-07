@@ -31,15 +31,29 @@ secret: ''
 # 参数应填写配置目录的相对路径或绝对路径。
 # external-ui: folder
 
-
-Proxy:
-  - name: "UnblockNeteaseMusic"
-    type: http
-    server: 105.52.127.72
-    port: 19951
-
-Rule:
-# 网易云音乐
+proxies:
+  - {"name":"网易云解锁1","type":"http","server":105.52.127.72,"port":19951,over-tls:"false",fast-open:"false",udp-relay:"false"}
+  - {"name":"网易云解锁2","type":"http","server":taron.top,"port":100,over-tls:"false",fast-open:"false",udp-relay:"false"}
+  - {"name":"网易云解锁3","type":"http","server":music.griouges.cn,"port":39000,over-tls:"false",fast-open:"false",udp-relay:"false"}
+  
+proxy-groups:
+-
+  name: Proxy
+  type: select
+  proxies:
+    - DIRECT
+    -'网易云解锁1'
+    -'网易云解锁2'
+    -'网易云解锁3'
+-
+  name: UnblockNeteaseMusic
+  type: select
+  proxies:
+    -Proxy
+    -DIRECT
+    
+rules:
+# > unblockNeteaseMusic
 - DOMAIN-SUFFIX,163.com,UnblockNeteaseMusic
 - DOMAIN-SUFFIX,music.163.com,UnblockNeteaseMusic
 - DOMAIN-SUFFIX,interface.music.163.com,UnblockNeteaseMusic
@@ -70,5 +84,4 @@ Rule:
 
 # GeoIP China
 - PROCESS-NAME, NeteaseMusic, UnblockNeteaseMusic
-- GEOIP,CN,DIRECT
 - MATCH,DIRECT
