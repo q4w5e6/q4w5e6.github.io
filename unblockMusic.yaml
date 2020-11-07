@@ -36,7 +36,7 @@ proxies:
   - {"name":"UnblockNeteaseMusic","type":"http","server":105.52.127.72,"port":19951}
 
 proxy-groups:
-  -
+-
   name: 网易云解锁
   type: select
   proxies:
