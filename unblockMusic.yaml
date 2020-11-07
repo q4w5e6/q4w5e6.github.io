@@ -32,18 +32,13 @@ secret: ''
 # external-ui: folder
 
 
-proxies:
-  - {"name":"UnblockNeteaseMusic","type":"http","server":105.52.127.72,"port":19951}
+Proxy:
+  - name: "UnblockNeteaseMusic"
+    type: http
+    server: 105.52.127.72
+    port: 19951
 
-proxy-groups:
--
-  name: proxies
-  type: select
-  proxies:
-    - 'UnblockNeteaseMusic'
-    - DIRECT
-
-rules:
+Rule:
 # 网易云音乐
 - DOMAIN-SUFFIX,music.163.com,UnblockNeteaseMusic
 - DOMAIN-SUFFIX,interface.music.163.com,UnblockNeteaseMusic
@@ -86,3 +81,4 @@ rules:
 
 # GeoIP China
 - GEOIP,CN,DIRECT
+- MATCH,DIRECT
