@@ -40,6 +40,7 @@ Proxy:
 
 Rule:
 # 网易云音乐
+- DOMAIN-SUFFIX,163.com,UnblockNeteaseMusic
 - DOMAIN-SUFFIX,music.163.com,UnblockNeteaseMusic
 - DOMAIN-SUFFIX,interface.music.163.com,UnblockNeteaseMusic
 - DOMAIN-SUFFIX,interface3.music.163.com,UnblockNeteaseMusic
@@ -67,18 +68,7 @@ Rule:
 - IP-CIDR,223.252.199.66/32,UnblockNeteaseMusic
 - IP-CIDR,223.252.199.67/32,UnblockNeteaseMusic
 
-# Local Area Network
-- DOMAIN-KEYWORD,announce,DIRECT
-- DOMAIN-KEYWORD,torrent,DIRECT
-- DOMAIN-KEYWORD,tracker,DIRECT
-- DOMAIN-SUFFIX,smtp,DIRECT
-- DOMAIN-SUFFIX,local,DIRECT
-- IP-CIDR,192.168.0.0/16,DIRECT
-- IP-CIDR,10.0.0.0/8,DIRECT
-- IP-CIDR,172.16.0.0/12,DIRECT
-- IP-CIDR,127.0.0.0/8,DIRECT
-- IP-CIDR,100.64.0.0/10,DIRECT
-
 # GeoIP China
+- PROCESS-NAME, NeteaseMusic, UnblockNeteaseMusic
 - GEOIP,CN,DIRECT
 - MATCH,DIRECT
