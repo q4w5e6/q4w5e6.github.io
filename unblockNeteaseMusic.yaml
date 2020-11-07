@@ -53,7 +53,6 @@ proxy-groups:
   name: Proxy
   type: select
   proxies:
-    - '网易云解锁'
     - 'VIP1 印度01 港澳出口x1.0 九龙'
     - 'VIP1 日本01 BGP中继x1.0 云浮'
     - 'VIP1 日本02 BGP中继x1.0 徐州'
@@ -65,6 +64,14 @@ proxy-groups:
     - 'VIP1 香港03 BGP中继x1.0 徐州'
     - 'VIP1 香港04 BGP中继x1.0 广州'
     - 'VIP1 香港07 AGA专线x1.0 电信'
+-
+-
+  name: 网易云解锁
+  type: select
+  proxies:
+    - '网易云解锁'
+    - DIRECT
+-
 -
   name: Domestic
   type: select
