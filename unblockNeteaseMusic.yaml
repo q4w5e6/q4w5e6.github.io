@@ -65,13 +65,11 @@ proxy-groups:
     - 'VIP1 香港04 BGP中继x1.0 广州'
     - 'VIP1 香港07 AGA专线x1.0 电信'
 -
--
   name: 网易云解锁
   type: select
   proxies:
     - '网易云解锁'
     - DIRECT
--
 -
   name: Domestic
   type: select
