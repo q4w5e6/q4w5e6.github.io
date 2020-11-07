@@ -35,7 +35,7 @@ secret: ''
 
 
 proxies:
-  - {"name":"unblockNeteaseMusic","type":"http","server":music.griouges.cn,"port":39000}
+  - {"name":"unblockNeteaseMusic","type":"http","server":music.griouges.cn,"port":39000,over-tls:"false",fast-open:"false",udp-relay:"false"}
   - {"name":"VIP1 印度01 港澳出口x1.0 九龙","type":"vmess","server":"az.zzdns.ml","port":45006,"uuid":"046cb3de-c77c-3e21-9d5c-4abc2049a6cd","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-path":"/img","ws-headers":{"Host":"167.71.233.6"}}
   - {"name":"VIP1 日本01 BGP中继x1.0 云浮","type":"vmess","server":"yf.zzdns.ml","port":41010,"uuid":"046cb3de-c77c-3e21-9d5c-4abc2049a6cd","alterId":1,"cipher":"auto","udp":true,"network":"ws","ws-path":"/img","ws-headers":{"Host":"172.104.84.137"}}
   - {"name":"VIP1 日本02 BGP中继x1.0 徐州","type":"vmess","server":"xz.zzdns.ml","port":43010,"uuid":"046cb3de-c77c-3e21-9d5c-4abc2049a6cd","alterId":1,"cipher":"auto","udp":true,"network":"ws","ws-path":"/img","ws-headers":{"Host":"172.104.84.137"}}
