@@ -53,6 +53,7 @@ proxy-groups:
   name: Proxy
   type: select
   proxies:
+    - DIRECT
     - 'VIP1 印度01 港澳出口x1.0 九龙'
     - 'VIP1 日本01 BGP中继x1.0 云浮'
     - 'VIP1 日本02 BGP中继x1.0 徐州'
