@@ -37,15 +37,10 @@ proxies:
 
 proxy-groups:
 -
-  name: 网易云解锁
+  name: proxies
   type: select
   proxies:
     - 'UnblockNeteaseMusic'
-    - DIRECT
--
-  name: Others
-  type: select
-  proxies:
     - DIRECT
 
 rules:
