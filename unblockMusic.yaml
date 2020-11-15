@@ -32,11 +32,52 @@ secret: ''
 # external-ui: folder
 
 proxies:
-  - {name: "🎧网易云解锁-1-🔮", type: http, server: "aimer.one", port: 3333}
-  - {name: "🎧网易云解锁-2-🔮", type: http, server: 106.52.127.72, port: 19951}
-  - {name: "🎧网易云解锁-3-🔮", type: http, server: "music.griouges.cn", port: 39000}
-#  - {name: "🎧网易云解锁-4-🔮", type: http, server: 111.67.197.245, port: 10086}
-#  - {name: "🎧网易云解锁-4-✈", type: ss, server: "music.desperadoj.com", port: 30003, cipher: "aes-128-gcm", password: "desperadoj.com"}
+  - 
+    name: "🎧网易云1"
+    type: http
+    server: 3music.poetyin.me
+    port: 100
+  - 
+    name: "🎧网易云2"
+    type: http
+    server: 106.52.127.72
+    port: 19951
+  - 
+    name: "🎧网易云3" 
+    type: http
+    server: music.griouges.cn
+    port: 39000
+  - 
+    name: "🎧网易云4"
+    type: http
+    server: music.lolico.me
+    port: 39000
+  -
+    name: "🎧网易云5"
+    type: http
+    server: block4music.poetyin.me
+    port: 39000
+  -
+    name: "🎧网易云6"
+    type: ss
+    server: blockmusic.poetyin.me
+    port: 30003
+    cipher: aes-128-gcm
+    password: "desperadoj.com_free_proxy_x80j"
+  -
+    name: "🎧网易云7"
+    type: ss
+    server: music.desperadoj.com
+    port: 30001
+    cipher: aes-128-gcm
+    password: "desperadoj.com_free_proxy_emx2"
+  -
+    name: "🎧网易云8"
+    type: ss
+    server: music.desperadoj.com
+    port: 30003
+    cipher: aes-128-gcm
+    password: "desperadoj.com_free_proxy_emx2"
   
 proxy-groups:
 -
@@ -44,16 +85,25 @@ proxy-groups:
   type: select
   proxies:
     - 🚀直接连接
-    - '🎧网易云解锁-1-🔮'
-    - '🎧网易云解锁-2-🔮'
-    - '🎧网易云解锁-3-🔮'
- #   - '🎧网易云解锁-4-🔮'
- #   - '🎧网易云解锁-4-✈'
+    - '🎧网易云1'
+    - '🎧网易云2'
+    - '🎧网易云3'
+    - '🎧网易云4'
+    - '🎧网易云5'
+    - '🎧网易云6'
+    - '🎧网易云7'
+    - '🎧网易云8'
+    - 😑推荐选择7！
 -
   name: UnblockNeteaseMusic
   type: select
   proxies:
     - 🔰节点选择
+    - 🚀直接连接
+-
+  name: 😑推荐选择7！
+  type: select
+  proxies:
     - 🚀直接连接
 -
   name: 🚀直接连接
