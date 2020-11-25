@@ -11,3 +11,9 @@ body{
     -moz-osx-font-smoothing: grayscale;
     mix-blend-mode: overlay;
 }
+.Redamancy{
+  font-family:Arial,'Times New Roman','Microsoft YaHei',SimHei;   
+    font:bold 24px/0.75em Arial,'Times New Roman','Microsoft YaHei',SimHei; 
+    margin: auto;
+    text-align: center;
+}
