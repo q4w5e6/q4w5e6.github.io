@@ -1,8 +1,6 @@
 
 .headimg
 {
-    width: 100%;
-    height: 100%;
     object-fit:cover;
 }
 body{
@@ -16,4 +14,8 @@ body{
     font:bold 24px/0.75em Arial,'Times New Roman','Microsoft YaHei',SimHei; 
     margin: auto;
     text-align: center;
+}
+img{
+    width: 100%;
+    height: 100%;
 }
