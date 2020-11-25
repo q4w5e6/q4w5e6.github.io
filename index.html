@@ -13,17 +13,6 @@
     </style>
     <script src="Js/main.js"></script>
     <script src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
-    <script>
-        //重写alert去除地址
-        window.alert = function (name) {
-                var iframe = document.createElement("IFRAME");
-                iframe.style.display = "none";
-                iframe.setAttribute("src", 'data:text/plain,');
-                document.documentElement.appendChild(iframe);
-                window.frames[0].window.alert(name);
-                iframe.parentNode.removeChild(iframe);
-            }
-    </script>
 </head>
 <body style="text-align: center;">
     <div style="height: 95%;height: 95%;margin: 1.5%;" id="chart">
