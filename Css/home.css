@@ -1,0 +1,13 @@
+
+.headimg
+{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+body{
+    margin:0;padding:0;line-height:1.5em;font-family:"Calibri";font-size:14px;color:#000000;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    mix-blend-mode: overlay;
+}
