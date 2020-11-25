@@ -27,6 +27,6 @@ jobs:
         with:
           src: github/q4w5e6
           dst: gitee/redamancy_double
-          static_list: "jd_scripts"
+          static_list: "q4w5e6.github.io"
           dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
           dst_token: ${{ secrets.GITEE_TOKEN }}
