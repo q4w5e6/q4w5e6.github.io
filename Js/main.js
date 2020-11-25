@@ -21,7 +21,7 @@
     }
     function Genshin_Impact(){
     let a = document.createElement('a');
-        a.href = 'Images/Genshin Impact.png';
+        a.href = 'Images/Genshin Impact.jpg';
         a.download = 'Genshin Impact.png';
         a.click();
     }
