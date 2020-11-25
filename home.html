@@ -13,10 +13,16 @@
     </style>
     <script>
         function Docopy(){
-            alert("复制就好啦＞︿＜");
+            window.alert = function (str) {
+                execScript('MsgBox   "' + str + '",0,"Redamancy"', 'VBScript');
+            }
+            alert("复制就好啦＞︿＜"); 
         }
         function Lsp(){
-            alert("不要乱点啊喂 o(*////▽////*)q");
+            window.alert = function (str) {
+                execScript('MsgBox   "' + str + '",0,"Redamancy"', 'VBScript');
+            }
+            alert("不要乱点啊喂 o(*////▽////*)q");   
         }
     </script>
 </head>
