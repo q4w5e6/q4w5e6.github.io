@@ -6,16 +6,15 @@ body{
     text-align: center;
     max-width: auto;
     max-height: auto;
+    height: 95%;height: 95%;
 }
 #chart{
-    -webkit-writing-mode: vertical-rl; /* for browsers of webkit engine */
-	writing-mode: tb-rl; /* for ie */
-    height: 95%;height: 95%;margin: 1.5%;
+    margin: 1.5%;text-align: center;height: 95%;height: 95%;
 }
 .ys{
-    width:80%;height: 35%;
+    width:80%;height: 35%;margin: auto;
 }
-.ys.headimg
+.ys img
 {
     object-fit:cover;
     width: 100%;
