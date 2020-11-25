@@ -12,6 +12,65 @@
         @import url("Css/home.css");
     </style>
     <script src="Js/main.js"></script>
+    <script src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
+    <script>
+         $("#chart").kendoChart({
+                theme: $(document).data("kendoSkin") || "default",
+                title: {
+                    text: "Break-up of Spain Electricity Production for 2008"
+                },
+                legend: {
+                    position: "bottom",
+                    labels: {
+                        template: "#= text # (#= value #%)"
+                    }
+                },
+                seriesDefaults: {
+                    labels: {
+                        visible: true,
+                        format: "{0}%"
+                    }
+                },
+                series: [{
+                    type: "pie",
+                    data: [{
+                        category: "Hydro",
+                        value: 22
+                    }, {
+                        category: "Solar",
+                        value: 2
+                    }, {
+                        category: "Nuclear",
+                        value: 49
+                    }, {
+                        category: "Wind",
+                        value: 27
+                    }]
+                }],
+                tooltip: {
+                    visible: true,
+                    format: "{0}%"
+                }
+            });
+
+            //判断是否支持SVG
+            /*
+                if(!testSVG()){
+                    var svgTagHtml = $("#chart").data("kendoChart").svg();
+                  var canvasHtml = '<canvas id="kendoChart_canvas"></canvas>';
+                  $("#chart").empty().html(canvasHtml);
+                  canvg(document.getElementById('kendoChart_canvas'), svgTagHtml);
+                }
+            */
+            //change svg Tag to canvas Tag
+            //get svg Tag html
+            //.data方法传入的是chart类型.如果是kendoRadialGauge，那么.data传入的是'kendoRadialGauge';
+            var svgTagHtml = $("#chart").data("kendoChart").svg();
+            var canvasHtml = '<canvas id="kendoChart_canvas"></canvas>';
+            $("#chart").empty().html(canvasHtml);
+            canvg(document.getElementById('kendoChart_canvas'), svgTagHtml);
+                });
+    </script>
     <script>
         //重写alert去除地址
         window.alert = function (name) {
@@ -25,7 +84,7 @@
     </script>
 </head>
 <body style="text-align: center;">
-    <div style="height: 95%;height: 95%;margin: 1.5%;">
+    <div style="height: 95%;height: 95%;margin: 1.5%;" id="chart">
         <p><span class="Redamancy">Redamancy的博客</span></p>
         <div style="width:80%;height: 35%;text-align: center;margin: auto;"><img src="Images/headimg.jpg" class="headimg" onclick="Lsp()"></a></div>
         <p>还没写内容...</p>
