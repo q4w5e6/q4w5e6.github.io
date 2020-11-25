@@ -1,8 +1,5 @@
 body{
-    margin:0 auto;padding:0;line-height:1.5em;font-family:"Calibri";font-size:14px;color:#000000;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    mix-blend-mode: overlay;
+    margin:0 auto;padding:0;line-height:1.5em;font-family:"Times New Roman";font-size:14px;color:#000000;
     text-align: center;
     max-width: auto;
     max-height: auto;
