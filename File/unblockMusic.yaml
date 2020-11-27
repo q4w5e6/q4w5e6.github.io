@@ -78,6 +78,20 @@ proxies:
     port: 30003
     cipher: aes-128-gcm
     password: "desperadoj.com_free_proxy_emx2"
+  -
+    name: "🎧网易云9"
+    type: ss
+    server: proxy.plusmedia.site
+    port: 58080
+    cipher: rc4-md5
+    password: "ieG9l1nte5eo7IBZas84jLi"
+  -
+    name: "🎧网易云10"
+    type: ss
+    server: proxy.plusmedia.site
+    port: 58080
+    cipher: rc4-md5
+    password: "ieG9l1nte5eo7IBZas84jLi"
   
 proxy-groups:
 -
@@ -93,6 +107,8 @@ proxy-groups:
     - '🎧网易云6'
     - '🎧网易云7'
     - '🎧网易云8'
+    - '🎧网易云9'
+    - '🎧网易云10'
     - 😑推荐选择7！
 -
   name: UnblockNeteaseMusic
