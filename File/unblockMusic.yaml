@@ -89,7 +89,7 @@ proxies:
     name: "🎧网易云10"
     type: ss
     server: proxy.plusmedia.site
-    port: 58080
+    port: 58081
     cipher: rc4-md5
     password: "ieG9l1nte5eo7IBZas84jLi"
   
