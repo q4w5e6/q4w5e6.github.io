@@ -13,9 +13,9 @@
     }
     function Lsp() {
     n++;
-        alert("不要乱点啊喂 (*////▽////*)\n\n呐~\n图给你(*^▽^*)");
         if(n=1){
-    Genshin_Impact()
+            alert("不要乱点啊喂 (*////▽////*)\n\n呐~\n图给你(*^▽^*)");
+            Genshin_Impact();
         }
     }
     function Genshin_Impact(){
