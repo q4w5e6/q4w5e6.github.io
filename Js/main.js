@@ -16,7 +16,6 @@
         alert("不要乱点啊喂 (*////▽////*)\n\n呐~\n图给你(*^▽^*)");
         if(n=1){
     Genshin_Impact()
-            n=0;
         }
     }
     function Genshin_Impact(){
