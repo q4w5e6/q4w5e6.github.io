@@ -21,7 +21,7 @@
     }
     function Genshin_Impact(){
     let a = document.createElement('a');
-        a.href = 'Images/Genshin Impact.jpg';
+        a.href = 'https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/Images/Genshin%20Impact.jpg';
         a.download = 'Genshin Impact.png';
         a.click();
     }
