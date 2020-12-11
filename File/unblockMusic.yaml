@@ -20,7 +20,7 @@ mode: Rule
 
 # 设置日志输出级别 (默认级别：silent，即不输出任何内容，以避免因日志内容过大而导致程序内存溢出）。
 # 5 个级别：silent / info / warning / error / debug。级别越高日志输出量越大，越倾向于调试，若需要请自行开启。
-log-level: silent
+log-level: warning
 # Clash 的 RESTful API
 external-controller: '0.0.0.0:9090'
 
@@ -99,6 +99,7 @@ proxy-groups:
   type: select
   proxies:
     - 🚀直接连接
+    - ♻️自动解锁
     - '🎧网易云1'
     - '🎧网易云2'
     - '🎧网易云3'
@@ -109,7 +110,22 @@ proxy-groups:
     - '🎧网易云8'
     - '🎧网易云9'
     - '🎧网易云10'
-    - 😑推荐选择7！
+-
+    name: ♻️自动解锁
+    type: url-test
+    url: http://clientlog3.music.163.com/
+    interval: 300
+    proxies:
+    - '🎧网易云1'
+    - '🎧网易云2'
+    - '🎧网易云3'
+    - '🎧网易云4'
+    - '🎧网易云5'
+    - '🎧网易云6'
+    - '🎧网易云7'
+    - '🎧网易云8'
+    - '🎧网易云9'
+    - '🎧网易云10'
 -
   name: UnblockNeteaseMusic
   type: select
