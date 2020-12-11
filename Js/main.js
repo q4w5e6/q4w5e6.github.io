@@ -1,5 +1,11 @@
 
     var n=0;
+    //测试不在焦点改变title
+    document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState == 'hidden') {
+        normal_title = document.title;
+        document.title = '死鬼去哪里了啊(╬▔皿▔)╯！';
+    } else document.title = normal_title; });
     function Docopy() {
        var Url2=document.getElementById("url").innerText;
         var oInput = document.createElement('input');
