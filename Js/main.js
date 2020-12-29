@@ -75,12 +75,12 @@
             var ua = window.navigator.userAgent;
             //var isIE = window.ActiveXObject != undefined && ua.indexOf("MSIE") != -1;  
             var isIE = !!window.ActiveXObject || "ActiveXObject" in window;
+            var isAndroid = ua.indexOf("Andriod") > -1;
             var isFirefox = ua.indexOf("Firefox") > -1;
             var isEdge = ua.indexOf('Edge') > -1;
             var isOpera = ua.indexOf('opr') > -1 && window.opr;
             var isChrome = ua.indexOf("Chrome") > -1 && window.chrome;
             var isSafari = ua.indexOf("Safari") > -1 && (ua.indexOf("like Mac OS X") > -1 || ua.indexOf("Macintosh") > -1) ;
-            var isAndroid = ua.indexOf("Andriod") > -1;
             if (isIE) {
                 return "IE";
             } else if (isAndroid) {
