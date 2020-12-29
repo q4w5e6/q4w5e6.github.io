@@ -53,7 +53,7 @@
             }
             else{
                 alert("如果使用Chrome/Edge/Firefox/IE浏览器\n\n下载会更快哦~" + getUrl);
-                if (getUrl == "https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/Images/Genshin%20Impact.jpg'"){
+                if (getUrl == "https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/Images/Genshin%20Impact.jpg"){
                     var url ="Images/Genshin Impact.jpg";
                 }
                 else if (getUrl == "https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/File/unblockMusic.yaml"){
