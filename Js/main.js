@@ -82,6 +82,8 @@
             var isAndroid = ua.indexOf("Andriod") > -1;
             if (isIE) {
                 return "IE";
+            } else if (isAndroid) {
+                return "Andriod";
             } else if (isFirefox) {
                 return "Firefox";
             } else if (isOpera) {
@@ -92,9 +94,6 @@
                 return "Chrome";
             } else if (isSafari) {
                 return "Safari";
-            }
-                else if(isAndroid){
-                return "Andriod";
             } else {
                 return "Unkown";
             }
