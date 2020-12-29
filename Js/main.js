@@ -75,7 +75,7 @@
             var ua = window.navigator.userAgent;
             //var isIE = window.ActiveXObject != undefined && ua.indexOf("MSIE") != -1;  
             var isIE = !!window.ActiveXObject || "ActiveXObject" in window;
-            var isAndroid = ua.indexOf("Andriod") > -1;
+            var isAndroid = ua.indexOf("Android") > -1;
             var isFirefox = ua.indexOf("Firefox") > -1;
             var isEdge = ua.indexOf('Edge') > -1;
             var isOpera = ua.indexOf('opr') > -1 && window.opr;
@@ -84,7 +84,7 @@
             if (isIE) {
                 return "IE";
             } else if (isAndroid) {
-                return "Andriod";
+                return "Android";
             } else if (isFirefox) {
                 return "Firefox";
             } else if (isOpera) {
