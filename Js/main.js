@@ -30,17 +30,18 @@
     x.open("GET", url, true);
     x.responseType = 'blob';
     x.onload = function (e) {
-        var url = window.URL.createObjectURL(x.response)
+        var url = window.URL.createObjectURL(x.response);
         var a = document.createElement('a');
-        a.href = url
+        a.href = url;
         a.download = fileName;
-        document.body.appendChild(a)
-        a.click()
+        document.body.appendChild(a);
+        a.click();
         }
     x.send();
     }
     function clearCache(){
         var clearcache = new XMLHttpRequest();
+        Response.AddHeader("Access-Control-Allow-Origin", "*");
         clearcache.open("GET", 'https://purge.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/File/unblockMusic.yaml', true);
         clearcache.send();
     }
@@ -58,11 +59,11 @@
             x.open("GET", url, true);
             x.responseType = 'blob';
             x.onload=function(e) {
-                var url = window.URL.createObjectURL(x.response)
+                var url = window.URL.createObjectURL(x.response);
                 var a = document.createElement('a');
-                a.href = url
+                a.href = url;
                 a.download = fileName;
-                a.click()
+                a.click();
             }
             x.send();
         }
