@@ -28,7 +28,6 @@
         }
     }
     function downloadFile(url, fileName) {//跨域文件路径、下载到本地的文件名
-    url = url.replace(/\\/g, '/');
     var x = new XMLHttpRequest();
     x.open("GET", url, true);
     x.responseType = 'blob';
