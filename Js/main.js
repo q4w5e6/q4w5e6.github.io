@@ -53,7 +53,7 @@
                 window.navigator.msSaveBlob(x.response, fileName);
             }
             else{
-                alert("unknown");
+                alert("unknown"+url);
                 alert("如果使用Chrome/Edge/Firefox/IE\n\n下载会更快哦~");
                 if (url == "https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/Images/Genshin%20Impact.jpg'"){
                     var url ="Images/Genshin Impact.jpg";
@@ -62,7 +62,6 @@
                     var url ="File/unblockMusic.yaml";
                 }
                 else {alert("不提供该文件的下载~");return false;};
-                alert(url);
                 a.href = url;
                 a.download = fileName;
                 document.body.appendChild(a);
