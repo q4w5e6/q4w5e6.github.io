@@ -31,11 +31,10 @@
     var x = new XMLHttpRequest();
     x.open("GET", url, true);
     x.responseType = 'blob';
-    x.onload = function (e) {
+    x.onload = function (url) {
         if (x.status === 200){ 
             var b = getBrowser();
-            if (b == "Chrome") {
-                alert("chrome");
+            if (b == "Chrome"||"Safari") {
                 var url = window.URL.createObjectURL(x.response);
                 var a = document.createElement('a');
                 a.href = url;
@@ -45,7 +44,6 @@
                 document.body.removeChild(a);
             }
             else if (b == "Firefox") {
-                alert("firebox");
                 var url = window.URL.createObjectURL(x.response);
                 //window.location.href = url;
                 parent.location.href = url;
@@ -53,8 +51,7 @@
                 window.navigator.msSaveBlob(x.response, fileName);
             }
             else{
-                alert("unknown"+url);
-                alert("如果使用Chrome/Edge/Firefox/IE\n\n下载会更快哦~");
+                alert("如果使用Chrome/Edge/Firefox/IE浏览器\n\n下载会更快哦~");
                 if (url == "https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/Images/Genshin%20Impact.jpg'"){
                     var url ="Images/Genshin Impact.jpg";
                 }
@@ -81,7 +78,8 @@
             var isEdge = ua.indexOf("Edg") != -1;
             var isOpera = window.opr != undefined;
             var isChrome = ua.indexOf("Chrome") && window.chrome;
-            var isSafari = ua.indexOf("Safari") != -1 && ua.indexOf("Version") != -1;
+            var isSafari = ua.indexOf("Safari") != -1 && ua.indexOf("Version") != -1 && ua.indexOf("OS") != -1;
+            var isAndroid = ua.indexOf("Andriod") != -1 && ua.indexOf("Linux");
             if (isIE) {
                 return "IE";
             } else if (isFirefox) {
@@ -94,6 +92,9 @@
                 return "Chrome";
             } else if (isSafari) {
                 return "Safari";
+            }
+                else if(isAndroid){
+                return "Andriod";
             } else {
                 return "Unkown";
             }
