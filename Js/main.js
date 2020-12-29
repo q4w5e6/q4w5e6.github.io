@@ -49,7 +49,6 @@
     }
     function clearCache(){
         var clearcache = new XMLHttpRequest();
-        clearcache.Response.AddHeader("Access-Control-Allow-Origin", "*");
         clearcache.open("GET", 'http://purge.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/File/unblockMusic.yaml', true);
         clearcache.send();
     }
