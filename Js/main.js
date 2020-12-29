@@ -26,19 +26,22 @@
         }
     }
     function downloadFile(url, fileName) {//跨域文件路径、下载到本地的文件名
-    var x = new XMLHttpRequest();
-    x.Response.AddHeader("Access-Control-Allow-Origin", "*");
+    const x = new XMLHttpRequest();
     x.open("GET", url, true);
     x.responseType = 'blob';
-    x.onload = function (e) {
-        var url = window.URL.createObjectURL(x.response);
-        var a = document.createElement('a');
-        a.href = url;
-        a.download = fileName;
-        document.body.appendChild(a);
-        a.click();
-        }
     x.send();
+    saveAs();
+    function saveAs() {
+        if (x.status === 200){
+            var url = window.URL.createObjectURL(x.response);
+            var a = document.createElement('a');
+            a.href = url;
+            a.download = fileName;
+            document.body.appendChild(a);
+            a.click();
+        }
+        else{alert("请求出错");}
+        }
     }
     function clearCache(){
         var clearcache = new XMLHttpRequest();
