@@ -23,7 +23,7 @@
     n++;
         if(n=1){
             var b = getBrowser();
-            if (b == "Chrome" || "Safari" || "Firefox" || "IE"){
+            if (b == ("Chrome" || "Safari" || "Firefox" || "IE" || "Edge" )){
                 alert("(*////▽////*)正在请求下载高清大图");
             }else{
                 alert("(*////▽////*)正在请求下载高清大图\n可能需要等待较长时间…\n如果使用Chrome/Safari/Firefox/IE浏览器\n\n下载会更快哦~");
@@ -40,7 +40,7 @@
     x.onload = function (e) {
         if (x.status === 200){ 
             var b = getBrowser();
-            if (b == "Chrome" || "Safari") {
+            if (b == ("Chrome" || "Safari" || "Edge" )) {
                 var url = window.URL.createObjectURL(x.response);
                 var a = document.createElement('a');
                 a.href = url;
