@@ -106,7 +106,12 @@
         clearcache.send();
     }
     function unlockmusicConfig(){
-        downloadFile("https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/File/unblockMusic.yaml", "解锁网易云配置.yaml");
+        var a = document.createElement('a');
+        a.href = "https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/File/unblockMusic.yaml";
+        a.download = "解锁网易云配置.yaml";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
     }
     /*function Genshin_Impact(){
     let a = document.createElement('a');
