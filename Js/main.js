@@ -34,18 +34,57 @@
     x.open("GET", url, true);
     x.responseType = 'blob';
     x.onload = function (e) {
-        if (x.status === 200){
-            var urlObject = window.URL || window.webkitURL || window;
-            var url = urlObject.createObjectURL(x.response);
-            var a = document.createElement('a');
-            a.href = url;
-            a.download = fileName;
-            document.body.appendChild(a);
-            a.click();
+        if (x.status === 200){ 
+            var b = getBrowser();
+            if (b == "Chrome") {
+                var url = uwindow.URL.createObjectURL(x.response);
+                var a = document.createElement('a');
+                a.href = url;
+                a.download = fileName;
+                //document.body.appendChild(a);
+                a.click();}
+            else if (b == "Firefox") {
+                var url = URL.createObjectURL(x.response);
+                //window.location.href = url;
+                parent.location.href = url;
+            } else if (b == "IE") {
+                window.navigator.msSaveBlob(x.response, fileName);
+            }
+            else{
+                var url = uwindow.URL.createObjectURL(x.response);
+                var a = document.createElement('a');
+                a.href = url;
+                a.download = fileName;
+                //document.body.appendChild(a);
+                a.click();
+            }
         }
         else{alert("请求出错");}
         }
         x.send();
+
+        function getBrowser() {
+            var ua = window.navigator.userAgent;
+            //var isIE = window.ActiveXObject != undefined && ua.indexOf("MSIE") != -1;  
+            var isIE = !!window.ActiveXObject || "ActiveXObject" in window;
+            var isFirefox = ua.indexOf("Firefox") != -1;
+            var isOpera = window.opr != undefined;
+            var isChrome = ua.indexOf("Chrome") && window.chrome;
+            var isSafari = ua.indexOf("Safari") != -1 && ua.indexOf("Version") != -1;
+            if (isIE) {
+                return "IE";
+            } else if (isFirefox) {
+                return "Firefox";
+            } else if (isOpera) {
+                return "Opera";
+            } else if (isChrome) {
+                return "Chrome";
+            } else if (isSafari) {
+                return "Safari";
+            } else {
+                return "Unkown";
+            }
+        } 
     }
     function clearCache(){
         var clearcache = new XMLHttpRequest();
