@@ -40,8 +40,11 @@
                 var a = document.createElement('a');
                 a.href = url;
                 a.download = fileName;
-                //document.body.appendChild(a);
-                a.click();}
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            }
             else if (b == "Firefox") {
                 var url = window.URL.createObjectURL(x.response);
                 //window.location.href = url;
