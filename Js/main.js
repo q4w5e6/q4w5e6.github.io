@@ -52,9 +52,9 @@
                 window.navigator.msSaveBlob(x.response, fileName);
             }
             else{
-                alert("如果使用Chrome/Edge/Firefox/IE浏览器\n\n下载会更快哦~");
                 if (getUrl == "https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/Images/Genshin%20Impact.jpg"){
                     var url ="Images/Genshin Impact.jpg";
+                    alert("如果使用Chrome/Edge/Firefox/IE浏览器\n\n下载会更快哦~");
                 }
                 else if (getUrl == "https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/File/unblockMusic.yaml"){
                     var url ="File/unblockMusic.yaml";
@@ -106,12 +106,7 @@
         clearcache.send();
     }
     function unlockmusicConfig(){
-        var a = document.createElement('a');
-        a.href = "File/unblockMusic.yaml";
-        a.download = "解锁网易云配置.yaml";
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
+        downloadFile("https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/File/unblockMusic.yaml", "解锁网易云配置.yaml");
     }
     /*function Genshin_Impact(){
     let a = document.createElement('a');
