@@ -36,6 +36,7 @@
         if (x.status === 200){ 
             var b = getBrowser();
             if (b == "Chrome"||"Safari") {
+                alert("chrome");
                 var url = window.URL.createObjectURL(x.response);
                 var a = document.createElement('a');
                 a.href = url;
@@ -45,6 +46,7 @@
                 document.body.removeChild(a);
             }
             else if (b == "Firefox") {
+                alert("firebox");
                 var url = window.URL.createObjectURL(x.response);
                 //window.location.href = url;
                 parent.location.href = url;
@@ -52,6 +54,7 @@
                 window.navigator.msSaveBlob(x.response, fileName);
             }
             else{
+                alert("unknown");
                 alert("如果使用Chrome/Edge/Firefox/IE\n\n下载会更快哦~");
                 if (url == "https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/Images/Genshin%20Impact.jpg'"){
                     var url ="Images/Genshin Impact.jpg";
