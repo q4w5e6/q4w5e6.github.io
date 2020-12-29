@@ -35,7 +35,7 @@
     x.onload = function (e) {
         if (x.status === 200){ 
             var b = getBrowser();
-            if (b == "Chrome"||"Safari") {
+            if (b == "Chrome") {
                 alert("chrome");
                 var url = window.URL.createObjectURL(x.response);
                 var a = document.createElement('a');
