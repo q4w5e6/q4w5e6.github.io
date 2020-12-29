@@ -24,11 +24,11 @@
         if(n=1){
             alert("不要乱点啊喂 (*////▽////*)\n\n呐~\n图给你(*^▽^*)");
             //Genshin_Impact();
-            downloadFile('https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/Images/Genshin%20Impact.jpg', 'Genshin Impact.jpg');
+            downloadFile("https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/Images/Genshin%20Impact.jpg", "Genshin Impact.jpg");
         }
     }
     function downloadFile(url, fileName) {//跨域文件路径、下载到本地的文件名
-    var getUrl=url;
+    const getUrl=url;
     var x = new XMLHttpRequest();
     x.open("GET", url, true);
     x.responseType = 'blob';
@@ -52,7 +52,7 @@
                 window.navigator.msSaveBlob(x.response, fileName);
             }
             else{
-                alert("如果使用Chrome/Edge/Firefox/IE浏览器\n\n下载会更快哦~");
+                alert("如果使用Chrome/Edge/Firefox/IE浏览器\n\n下载会更快哦~" + getUrl);
                 if (getUrl == "https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/Images/Genshin%20Impact.jpg'"){
                     var url ="Images/Genshin Impact.jpg";
                 }
@@ -70,7 +70,7 @@
         }
         else{alert("请求出错");}
         }
-        x.send();
+        x.send();}
 
         function getBrowser() {
             var ua = window.navigator.userAgent;
@@ -100,7 +100,6 @@
                 return "Unkown";
             }
         } 
-    }
     function clearCache(){
         var clearcache = new XMLHttpRequest();
         clearcache.open("GET", 'https://purge.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/File/unblockMusic.yaml', true);
