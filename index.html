@@ -13,7 +13,7 @@
     <script src="Js/main.js"></script>
     <script src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
 </head>
-<body>
+<body onload="clearCache()">
     <div id="chart">
         <p><span class="Redamancy">Redamancy的博客</span></p>
         <div class="ys"><img src="Images/headimg.jpg" onclick="Lsp()"></div>
@@ -22,7 +22,7 @@
                     src="https://img.shields.io/badge/Clash-安卓下载-green.svg"></a></p>
         <p><a href="https://github.com/Fndroid/clash_for_windows_pkg/releases"><img
                     src="https://img.shields.io/badge/Clash-Windows(Mac)下载页面-cyan.svg"></a></p>
-        <p><a href="File/unblockMusic.yaml" download="unblockMusic.yaml"><img
+        <p><a href="#" onclick="unlockmusicConfig()" ><img
                     src="https://img.shields.io/badge/Clash网易云解锁配置-下载-red.svg"></a></p>
         <!--https://purge.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/File/unblockMusic.yaml 更新缓存-->
         <p>或者URL导入：<br><button class="push_button red"
