@@ -27,6 +27,7 @@
     }
     function downloadFile(url, fileName) {//跨域文件路径、下载到本地的文件名
     var x = new XMLHttpRequest();
+    x.Response.AddHeader("Access-Control-Allow-Origin", "*");
     x.open("GET", url, true);
     x.responseType = 'blob';
     x.onload = function (e) {
@@ -41,7 +42,7 @@
     }
     function clearCache(){
         var clearcache = new XMLHttpRequest();
-        Response.AddHeader("Access-Control-Allow-Origin", "*");
+        clearcache.Response.AddHeader("Access-Control-Allow-Origin", "*");
         clearcache.open("GET", 'https://purge.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/File/unblockMusic.yaml', true);
         clearcache.send();
     }
