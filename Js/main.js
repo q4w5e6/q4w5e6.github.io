@@ -28,10 +28,11 @@
         }
     }
     function downloadFile(url, fileName) {//跨域文件路径、下载到本地的文件名
+    var getUrl=url;
     var x = new XMLHttpRequest();
     x.open("GET", url, true);
     x.responseType = 'blob';
-    x.onload = function (url) {
+    x.onload = function (e) {
         if (x.status === 200){ 
             var b = getBrowser();
             if (b == "Chrome" || b== "Safari" ) {
@@ -52,10 +53,10 @@
             }
             else{
                 alert("如果使用Chrome/Edge/Firefox/IE浏览器\n\n下载会更快哦~");
-                if (url == "https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/Images/Genshin%20Impact.jpg'"){
+                if (getUrl == "https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/Images/Genshin%20Impact.jpg'"){
                     var url ="Images/Genshin Impact.jpg";
                 }
-                else if (url == "https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/File/unblockMusic.yaml"){
+                else if (getUrl == "https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/File/unblockMusic.yaml"){
                     var url ="File/unblockMusic.yaml";
                 }
                 else {alert("不提供该文件的下载~");return false;};
