@@ -7,7 +7,7 @@
         document.title = '死鬼去哪里了啊(╬▔皿▔)╯！';
     } else document.title = normal_title; });
     function Docopy() {
-       var Url2=document.getElementById("url").innerText;
+        var Url2 = document.getElementById("unblockmusicUrl").innerText;
         var oInput = document.createElement('input');
         oInput.value = Url2;
         document.body.appendChild(oInput);
