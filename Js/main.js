@@ -60,6 +60,7 @@
                     var url ="File/unblockMusic.yaml";
                 }
                 else {alert("不提供该文件的下载~");return false;};
+                alert(url);
                 a.href = url;
                 a.download = fileName;
                 document.body.appendChild(a);
