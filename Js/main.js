@@ -37,21 +37,21 @@
         if (x.status === 200){ 
             var b = getBrowser();
             if (b == "Chrome") {
-                var url = uwindow.URL.createObjectURL(x.response);
+                var url = window.URL.createObjectURL(x.response);
                 var a = document.createElement('a');
                 a.href = url;
                 a.download = fileName;
                 //document.body.appendChild(a);
                 a.click();}
             else if (b == "Firefox") {
-                var url = URL.createObjectURL(x.response);
+                var url = window.URL.createObjectURL(x.response);
                 //window.location.href = url;
                 parent.location.href = url;
             } else if (b == "IE") {
                 window.navigator.msSaveBlob(x.response, fileName);
             }
             else{
-                var url = uwindow.URL.createObjectURL(x.response);
+                var url = window.URL.createObjectURL(x.response);
                 var a = document.createElement('a');
                 a.href = url;
                 a.download = fileName;
