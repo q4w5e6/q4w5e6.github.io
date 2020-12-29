@@ -23,10 +23,10 @@
     n++;
         if(n=1){
             var b = getBrowser();
-            if (b == ("Chrome" || "Safari" || "Firefox" || "IE" || "Edge" )){
+            if (b == ("Chrome" || "Safari" || "Firefox" || "Edge" || "IE" )){
                 alert("(*////▽////*)正在请求下载高清大图");
             }else{
-                alert("(*////▽////*)正在请求下载高清大图\n可能需要等待较长时间…\n如果使用Chrome/Safari/Firefox/IE浏览器\n\n下载会更快哦~");
+                alert("(*////▽////*)正在请求下载高清大图\n可能需要等待较长时间…\n如果使用Chrome/Safari/Firefox/Edge/IE浏览器\n\n下载会更快哦~");
             }
             //Genshin_Impact();
             downloadFile("https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/Images/Genshin%20Impact.jpg", "Genshin Impact.jpg");
