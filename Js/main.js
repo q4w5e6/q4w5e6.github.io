@@ -30,8 +30,7 @@
     x.open("GET", url, true);
     x.responseType = 'blob';
     x.send();
-    saveAs();
-    function saveAs() {
+    x.onload = function (e) {
         if (x.status === 200){
             var url = window.URL.createObjectURL(x.response);
             var a = document.createElement('a');
