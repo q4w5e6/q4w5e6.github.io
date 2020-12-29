@@ -22,7 +22,7 @@
     function Lsp() {
     n++;
         if(n=1){
-            alert("(*////▽////*)正在请求下载高清大图\n如果使用Chrome/Edge/Firefox/IE浏览器\n\n下载会更快哦~");
+            alert("(*////▽////*)正在请求下载高清大图\n如果使用Chrome/Edge/Firefox/Edge/IE浏览器\n\n下载会更快哦~");
             //Genshin_Impact();
             downloadFile("https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/Images/Genshin%20Impact.jpg", "Genshin Impact.jpg");
         }
@@ -35,7 +35,7 @@
     x.onload = function (e) {
         if (x.status === 200){ 
             var b = getBrowser();
-            if (b == "Chrome" || b== "Safari" ) {
+            if (b == "Chrome" || "Safari" || "Edge") {
                 var url = window.URL.createObjectURL(x.response);
                 var a = document.createElement('a');
                 a.href = url;
