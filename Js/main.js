@@ -26,13 +26,14 @@
         }
     }
     function downloadFile(url, fileName) {//跨域文件路径、下载到本地的文件名
+    url = url.replace(/\\/g, '/');
     const x = new XMLHttpRequest();
     x.open("GET", url, true);
     x.responseType = 'blob';
-    x.send();
     x.onload = function (e) {
         if (x.status === 200){
-            var url = window.URL.createObjectURL(x.response);
+            var urlObject = window.URL || window.webkitURL || window;
+            var url = urlObject.createObjectURL(x.response);
             var a = document.createElement('a');
             a.href = url;
             a.download = fileName;
@@ -41,6 +42,7 @@
         }
         else{alert("请求出错");}
         }
+        x.send();
     }
     function clearCache(){
         var clearcache = new XMLHttpRequest();
