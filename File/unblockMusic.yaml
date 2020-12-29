@@ -34,9 +34,12 @@ secret: ''
 proxies:
   - 
     name: "🎧网易云1"
+    server: aimer.one
+    port: 23333
     type: http
-    server: 3music.poetyin.me
-    port: 100
+    username: ""
+    password: ""
+    tls: false
   - 
     name: "🎧网易云2"
     type: http
