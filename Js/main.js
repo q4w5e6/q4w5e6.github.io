@@ -22,7 +22,7 @@
     function Lsp() {
     n++;
         if(n=1){
-            alert("不要乱点啊喂 (*////▽////*)\n\n呐~\n图给你(*^▽^*)");
+            alert("(*////▽////*)正在请求下载高清大图\n如果使用Chrome/Edge/Firefox/IE浏览器\n\n下载会更快哦~");
             //Genshin_Impact();
             downloadFile("https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/Images/Genshin%20Impact.jpg", "Genshin Impact.jpg");
         }
@@ -54,12 +54,11 @@
             else{
                 if (getUrl == "https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/Images/Genshin%20Impact.jpg"){
                     var url ="Images/Genshin Impact.jpg";
-                    alert("如果使用Chrome/Edge/Firefox/IE浏览器\n\n下载会更快哦~");
                 }
                 else if (getUrl == "https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/File/unblockMusic.yaml"){
                     var url ="File/unblockMusic.yaml";
                 }
-                else {alert("不提供该文件的下载~");return false;};
+                else {alert("暂时不提供该文件的下载~");return false;};
                 var a = document.createElement('a');
                 a.href = url;
                 a.download = fileName;
