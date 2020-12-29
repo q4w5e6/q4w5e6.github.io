@@ -16,9 +16,7 @@
         document.execCommand("Copy"); // 执行浏览器复制命令
         oInput.className = 'oInput';
         oInput.style.display='none';
-        $("#unblockmusicUrl").focus(function () {
-            document.activeElement.blur();
-        });
+        document.activeElement.blur();
         alert('复制成功＞︿＜');
     }
     function Lsp() {
