@@ -22,21 +22,41 @@
         if(n=1){
             alert("不要乱点啊喂 (*////▽////*)\n\n呐~\n图给你(*^▽^*)");
             //Genshin_Impact();
-            downloadFile('https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/Images/Genshin%20Impact.jpg', 'Genshin Impact.jpg');
+            downloadImage('https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/Images/Genshin%20Impact.jpg', 'Genshin Impact.jpg');
         }
     }
-    function downloadFile(url, fileName) {//跨域文件路径、下载到本地的文件名
-    var x = new XMLHttpRequest();
-    x.open("GET", url, true);
-    x.responseType = 'blob';
-    x.onload = function (e) {
-        var url = window.URL.createObjectURL(x.response)
+    function downloadText(url, fileName) {//跨域文件路径、下载到本地的文件名
+        let response = await fetch(url);
+        let blob = await response.blob();
+        let url = window.URL.createObjectURL(blob)
         var a = document.createElement('a');
         a.href = url
         a.download = fileName;
+        document.body.appendChild(a)
         a.click()
+        setTimeout(() => document.body.removeChild(a), 1000)
     }
-    x.send();
+    function downloadImage(url, fileName){
+        var canvas = document.createElement('canvas'),
+            ctx = canvas.getContext('2d'),
+            img = new Image();
+        img.crossOrigin = 'Anonymous';
+        img.onload = function () {
+            canvas.height = img.height;
+            canvas.width = img.width;
+            ctx.drawImage(img, 0, 0);
+            var dataURL = canvas.toDataURL('image/png');
+            let a = document.createElement('a');
+            a.href = dataURL;
+            a.download = name;
+            document.body.appendChild(a);
+            a.click();
+            setTimeout(() => {
+                document.body.removeChild(a);
+                canvas = null;
+            }, 1000);
+        };
+        img.src = url;
     }
     function clearCache(){
         var clearcache = new XMLHttpRequest();
@@ -44,12 +64,24 @@
         clearcache.send();
     }
     function unlockmusicConfig(){
-        downloadFile('https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/File/unblockMusic.yaml', '解锁网易云配置.yaml');
+        downloadText('https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/File/unblockMusic.yaml', '解锁网易云配置.yaml');
     }
     /*function Genshin_Impact(){
     let a = document.createElement('a');
         a.href = 'https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/Images/Genshin%20Impact.jpg';
         a.download = 'Genshin Impact.png';
         a.click();
-    }
+    function  downloadFile(url, fileName) {//跨域文件路径、下载到本地的文件名
+            var x = new XMLHttpRequest();
+            x.open("GET", url, true);
+            x.responseType = 'blob';
+            x.onload=function(e) {
+                var url = window.URL.createObjectURL(x.response)
+                var a = document.createElement('a');
+                a.href = url
+                a.download = fileName;
+                a.click()
+            }
+            x.send();
+        }
     */
