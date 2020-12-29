@@ -52,7 +52,7 @@
                 window.navigator.msSaveBlob(x.response, fileName);
             }
             else{
-                alert("如果使用Chrome/Edge/Firefox/IE浏览器\n\n下载会更快哦~" + getUrl);
+                alert("如果使用Chrome/Edge/Firefox/IE浏览器\n\n下载会更快哦~");
                 if (getUrl == "https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/Images/Genshin%20Impact.jpg"){
                     var url ="Images/Genshin Impact.jpg";
                 }
