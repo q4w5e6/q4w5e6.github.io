@@ -80,14 +80,16 @@
             var ua = window.navigator.userAgent;
             //var isIE = window.ActiveXObject != undefined && ua.indexOf("MSIE") != -1;  
             var isIE = !!window.ActiveXObject || "ActiveXObject" in window;
-            var isAndroid = ua.indexOf("Android") > -1;
+            var isAndroid = ua.indexOf("Android") > -1 || ua.indexOf('Adr') > -1;
             var isFirefox = ua.indexOf("Firefox") > -1;
             var isEdge = ua.indexOf('Edge') > -1;
             var isOpera = ua.indexOf('opr') > -1 && window.opr;
-            var isChrome = ua.indexOf("Chrome") > -1 && window.chrome;
+            var isChrome = ua.indexOf("Chrome") > -1 && window.chrome && window.MessageEvent && ! document.getBoxObjectFor;
             var isSafari = ua.indexOf("Safari") > -1 && ua.indexOf("Chrome") == -1 ;
             if (isIE) {
                 return "IE";
+            } else if (isChrome) {
+                return "Chrome";
             } else if (isAndroid) {
                 return "Android";
             } else if (isFirefox) {
@@ -96,8 +98,6 @@
                 return "Opera";
             } else if (isEdge) {
                 return "Edge";
-            } else if (isChrome) {
-                return "Chrome";
             } else if (isSafari) {
                 return "Safari";
             } else {
