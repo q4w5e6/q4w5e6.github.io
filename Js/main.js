@@ -22,8 +22,9 @@
     function Docopy() {
         //document.getElementById("unblockmusicUrl").innerHTML = "https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/File/unblockMusic.yaml";
         //var Url = document.getElementById("unblockmusicUrl").innerText;
+        var area = "https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/File/unblockMusic.yaml";
         var url = document.getElementById("unblockmusicUrl");
-        url.value = "https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/File/unblockMusic.yaml";
+        url.value = area;
         //var oInput = document.createElement('input');
         //oInput.value = Url;
         //oInput.value ="https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/File/unblockMusic.yaml";
