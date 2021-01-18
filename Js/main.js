@@ -23,11 +23,11 @@
         //document.getElementById("unblockmusicUrl").innerHTML = "https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/File/unblockMusic.yaml";
         //var Url = document.getElementById("unblockmusicUrl").innerText;
         var oInput = document.createElement('input');
+        oInput.style.display = 'none';
         oInput.value = Url;
         oInput.value ="https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/File/unblockMusic.yaml";
         document.body.appendChild(oInput);
         oInput.className = 'oInput';
-        oInput.style.display='none';
         oInput.select(); // 选择对象
         document.execCommand("Copy"); // 执行浏览器复制命令
         alert('复制成功＞︿＜');
