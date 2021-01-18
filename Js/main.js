@@ -6,7 +6,20 @@
         normal_title = document.title;
         document.title = '等你回来^_^';
     } else document.title = normal_title; });
-    function Docopy() {
+      function Docopy(){
+      if(window.clipboardData){
+      window.clipboardData.setData('https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/File/unblockMusic.yaml',s);
+   }else{
+      document.oncopy=function(e){
+         e.clipboardData.setData('https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/File/unblockMusic.yaml',s);
+         e.preventDefault();
+         document.oncopy=null;
+      }
+      document.execCommand('Copy');
+       alert('复制成功＞︿＜');
+   }
+      }
+   /* function Docopy() {
         document.getElementById("unblockmusicUrl").innerHTML = "https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/File/unblockMusic.yaml";
         var Url2 = document.getElementById("unblockmusicUrl").innerText;
         var oInput = document.createElement('input');
@@ -18,7 +31,7 @@
         oInput.style.display='none';
         document.activeElement.blur();
         alert('复制成功＞︿＜');
-    }
+    }*/
     function Lsp() {
     n++;
         if(n=1){
