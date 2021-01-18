@@ -32,7 +32,6 @@
         //oInput.select(); // 选择对象
         url.select();
         document.execCommand("Copy"); // 执行浏览器复制命令
-        url.value = "";
         //oInput.className = 'oInput';
         //oInput.style.display='none';
         alert('复制成功＞︿＜');
