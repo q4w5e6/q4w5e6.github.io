@@ -24,7 +24,7 @@
         //var Url = document.getElementById("unblockmusicUrl").innerText;
         var oInput = document.createElement('input');
         oInput.style.display = 'none';
-        oInput.value = Url;
+        //oInput.value = Url;
         oInput.value ="https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/File/unblockMusic.yaml";
         document.body.appendChild(oInput);
         oInput.className = 'oInput';
