@@ -1,4 +1,5 @@
-    var flag = true;
+    var unblockmusicconfigcache = true;
+    var lsp = true;
     //测试不在焦点改变title
     document.addEventListener('visibilitychange', function () {
     if (document.visibilityState == 'hidden') {
@@ -17,6 +18,7 @@
         alert('复制成功＞︿＜');
     }
     function Lsp() {
+        if (lsp){
             var b = getBrowser();
             if ( b == "Chrome" || b == "Safari" || b == "Firefox" || b == "Edge" || b == "IE" ){
                 alert("(*////▽////*)正在请求下载高清大图");
@@ -25,6 +27,8 @@
             }
             downloadFile("https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/Images/Genshin%20Impact.jpg", "Genshin Impact.jpg");
         }
+        lsp = false;
+    }
     function downloadFile(url, fileName) {//跨域文件路径、下载到本地的文件名
     const getUrl=url;
     var x = new XMLHttpRequest();
@@ -98,7 +102,7 @@
             }
         } 
     function unlockmusicConfig(){
-        if (flag){
+        if (unblockmusicconfigcache){
             var clearcache = new XMLHttpRequest();
             clearcache.open("GET", 'https://purge.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/File/unblockMusic.yaml', true);
             clearcache.send();
