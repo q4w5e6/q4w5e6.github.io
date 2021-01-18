@@ -4,7 +4,7 @@
     document.addEventListener('visibilitychange', function () {
     if (document.visibilityState == 'hidden') {
         normal_title = document.title;
-        document.title = '死鬼去哪里了啊(╬▔皿▔)╯！';
+        document.title = '等你回来^_^';
     } else document.title = normal_title; });
     function Docopy() {
         document.getElementById("unblockmusicUrl").innerHTML = "https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/File/unblockMusic.yaml";
