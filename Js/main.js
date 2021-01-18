@@ -27,9 +27,9 @@
         //oInput.value = Url;
         oInput.value ="https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/File/unblockMusic.yaml";
         document.body.appendChild(oInput);
-        oInput.className = 'oInput';
         oInput.select(); // 选择对象
         document.execCommand("Copy"); // 执行浏览器复制命令
+        oInput.className = 'oInput';
         alert('复制成功＞︿＜');
     }
     function Lsp() {
