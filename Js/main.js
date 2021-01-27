@@ -100,13 +100,19 @@
             } else {
                 return "Unkown";
             }
-        } 
-    function unlockmusicConfig(){
-        if (unblockmusicconfigcache){
-            var clearcache = new XMLHttpRequest();
-            clearcache.open("GET", 'https://purge.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/File/unblockMusic.yaml', true);
-            clearcache.send();
-            flag = false;
+        }
+        function whatBrowser() {
+            document.Browser.Name.value = navigator.appName;
+            document.Browser.Version.value = navigator.appVersion;
+            document.Browser.Code.value = navigator.appCodeName;
+            document.Browser.Agent.value = navigator.userAgent;
+        }
+        function unlockmusicConfig(){
+            if (unblockmusicconfigcache){
+                var clearcache = new XMLHttpRequest();
+                clearcache.open("GET", 'https://purge.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/File/unblockMusic.yaml', true);
+                clearcache.send();
+                flag = false;
         }
         downloadFile("https://cdn.jsdelivr.net/gh/q4w5e6/q4w5e6.github.io@master/File/unblockMusic.yaml", "解锁网易云配置.yaml");
     }

@@ -1,34 +1,27 @@
 <!DOCtype html>
 <html>
 <head>
-	<title></title>
+	<title>获取User-Agent</title>
+	<script src="/Js/main.js"></script>
 </head>
 <body οnlοad="whatBrowser()">
-	<script> 
-function whatBrowser() {  
-document.Browser.Name.value=navigator.appName;  
-document.Browser.Version.value=navigator.appVersion;  
-document.Browser.Code.value=navigator.appCodeName;  
-document.Browser.Agent.value=navigator.userAgent;  
-}  
-</script> 
 <table> 
-<form name="Browser"> 
+<form name="Browser" > 
 <tr> 
 <td> 浏览器名称: </td> 
-<td> <input type="txt" name="Name" size="110%"></td> 
+<td> <input type="txt" name="Name" size="110%" readonly></td> 
 </tr> 
 <tr> 
 <td> 版本号:</td> 
-<td> <input type="txt" name="Version" size="110%"></td> 
+<td> <input type="txt" name="Version" size="110%" readonly></td> 
 </tr> 
 <tr> 
 <td> 代码名称: </td> 
-<td> <input type="txt" name="Code" size="110%"></td> 
+<td> <input type="txt" name="Code" size="110%" readonly></td> 
 </tr> 
 <tr> 
 <td> 用户代理标识:</td> 
-<td> <input type="txt" name="Agent" size="110%"></td> 
+<td> <input type="txt" name="Agent" size="110%" readonly></td> 
 </tr> 
 </form> 
 </table> 
